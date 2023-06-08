@@ -6,6 +6,9 @@ module.exports = {
       width: {
         "4/10": "40%",
       },
+      fontFamily: {
+        Josefin: ["Josefin Sans", "sans-serif"],
+      },
     },
   },
   plugins: [],

@@ -11,21 +11,16 @@ const todoMain = document.querySelector(".todoMain");
 const todoStatus = document.querySelector(".todoStatusBar");
 const todoInput = document.querySelector(".inputTask");
 const todo = document.querySelectorAll(".todo");
-const todoHtml = `
-<input type="checkbox" id="1" />
-<label for="1"
-  >Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste,
-  corrupti?</label
->
-</div>`;
+
+const activeTaskCounter = document.getElementById("numStatus");
 
 console.log(bgBody);
 
 //CODE
-//changing theme
+//CHANGING THE THEME
 themeIcon.addEventListener("click", (e) => {
   const text = e.target.src;
-  console.log(text.includes("moon"));
+  //console.log(text.includes("moon"));
 
   if (text.includes("moon")) {
     themeIcon.src = "images/icon-sun.svg";
@@ -46,16 +41,31 @@ themeIcon.addEventListener("click", (e) => {
   }
 });
 
+//ADDING AND DISPLAYING INPUTTED TASKS
 todoInput.addEventListener("keydown", (e) => {
-  //console.log(e);
+  //only fire if the enter key is pressed
   if (e.key == "Enter") {
     const message = todoInput.value;
-    allTodo.push(message);
-    console.log(message, allTodo);
+    activeTodo.push(message);
+    console.log(message, activeTodo);
     todoInput.value = "";
+
+    const todoHtml = `
+        <div class="todo">
+          <input type="checkbox" id="1" />
+          <label for="1">
+            ${message}
+          </label>
+        </div> `;
+
+    todoMain.insertAdjacentHTML("afterbegin", todoHtml);
+    activeTaskCounter.textContent = ` ${activeTodo.length} items left`;
 
     if (todoInput.value !== "") {
       todoInput.value = "";
     }
+
+    console.log(activeTodo);
+    //active task counter
   }
 });
