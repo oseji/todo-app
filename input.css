@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.body {
+  @apply transition ease-in-out duration-300;
+}
+
+.lightThemeBody {
+  @apply bg-slate-300;
+}
+
+.lightTheme {
+  @apply bg-slate-100;
+}
+
+.darkTheme {
+  @apply bg-slate-950;
+}
+
+.darkThemeTodo {
+  @apply bg-slate-800 text-white;
+}
+
+.container {
+  @apply max-w-screen-2xl mx-auto;
+}
+
+.todoSection {
+  @apply w-4/10 mx-auto  p-2 relative bottom-56;
+}
+
+.logosGrp {
+  @apply flex flex-row justify-between items-center mb-10;
+}
+
+.logo {
+  @apply text-5xl text-white font-semibold tracking-widest;
+}
+
+.themeSwitch {
+  @apply cursor-pointer;
+}
+
+.inputTask {
+  @apply rounded-lg w-full p-4 outline-none transition ease-in-out duration-500;
+}
+
+.todoMain {
+  @apply mt-7 max-h-72 overflow-y-scroll transition ease-in-out duration-500 rounded-lg;
+}
+
+.todo {
+  @apply flex flex-row gap-5 items-center p-3 border-b border-slate-500;
+}
+
+.todoStatusBar {
+  @apply flex flex-row justify-between items-center py-2 px-4 transition ease-in-out duration-500;
+}
+
+.statusText {
+  @apply text-slate-500 cursor-pointer;
+}
