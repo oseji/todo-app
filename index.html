@@ -16,7 +16,13 @@
       <img
         src="images/bg-desktop-light.jpg"
         alt="background image"
-        class="bgImg"
+        class="bgImgDesktop"
+      />
+
+      <img
+        src="images/bg-mobile-light.jpg"
+        alt="background image"
+        class="bgImgMobile"
       />
 
       <div class="todoSection">
@@ -41,7 +47,7 @@
           </div>-->
           <div class="todoStatusBar lightTheme">
             <p id="numStatus" class="statusText text-sm">0 items left</p>
-            <div class="flex flex-row gap-3">
+            <div class="lg:visible lg:flex lg:flex-row lg:gap-3 hidden">
               <p class="todoStatus openStatusText">All</p>
               <p class="todoStatus statusText">Active</p>
               <p class="todoStatus statusText">Completed</p>
@@ -50,6 +56,12 @@
               Clear Completed
             </p>
           </div>
+        </div>
+
+        <div class="todoStatusMobile lightTheme">
+          <p class="todoStatus openStatusText">All</p>
+          <p class="todoStatus statusText">Active</p>
+          <p class="todoStatus statusText">Completed</p>
         </div>
       </div>
     </main>

@@ -550,16 +550,8 @@ video {
   }
 }
 
-.flex {
-  display: flex;
-}
-
-.flex-row {
-  flex-direction: row;
-}
-
-.gap-3 {
-  gap: 0.75rem;
+.hidden {
+  display: none;
 }
 
 .text-sm {
@@ -622,13 +614,40 @@ label::first-letter {
   max-width: 1536px;
 }
 
+.bgImgDesktop {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .bgImgDesktop {
+    display: block;
+  }
+}
+
+.bgImgMobile {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .bgImgMobile {
+    display: none;
+  }
+}
+
 .todoSection {
   position: relative;
-  bottom: 14rem;
+  bottom: 12rem;
   margin-left: auto;
   margin-right: auto;
-  width: 40%;
+  width: 83.333333%;
   padding: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  .todoSection {
+    bottom: 14rem;
+    width: 40%;
+  }
 }
 
 .logosGrp {
@@ -640,12 +659,19 @@ label::first-letter {
 }
 
 .logo {
-  font-size: 3rem;
-  line-height: 1;
+  font-size: 1.5rem;
+  line-height: 2rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1024px) {
+  .logo {
+    font-size: 3rem;
+    line-height: 1;
+  }
 }
 
 .themeSwitch {
@@ -702,4 +728,44 @@ label::first-letter {
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.todoStatusMobile {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1.5rem;
+  border-radius: 0.5rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 1024px) {
+  .todoStatusMobile {
+    display: none;
+  }
+
+  .lg\:visible {
+    visibility: visible;
+  }
+
+  .lg\:flex {
+    display: flex;
+  }
+
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:gap-3 {
+    gap: 0.75rem;
+  }
 }

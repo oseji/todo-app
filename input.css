@@ -38,8 +38,16 @@ label {
   @apply max-w-screen-2xl mx-auto;
 }
 
+.bgImgDesktop {
+  @apply hidden lg:block;
+}
+
+.bgImgMobile {
+  @apply lg:hidden w-full;
+}
+
 .todoSection {
-  @apply w-4/10 mx-auto  p-2 relative bottom-56;
+  @apply w-10/12 lg:w-4/10 mx-auto  p-2 relative bottom-48 lg:bottom-56;
 }
 
 .logosGrp {
@@ -47,7 +55,7 @@ label {
 }
 
 .logo {
-  @apply text-5xl text-white font-semibold tracking-widest;
+  @apply text-2xl lg:text-5xl text-white font-semibold tracking-widest;
 }
 
 .themeSwitch {
@@ -68,4 +76,8 @@ label {
 
 .todoStatusBar {
   @apply flex flex-row justify-between items-center py-2.5 px-4 transition ease-in-out duration-500;
+}
+
+.todoStatusMobile {
+  @apply lg:hidden flex flex-row gap-6 justify-center mt-3 py-2.5 px-4 rounded-lg transition ease-in-out duration-500;
 }
